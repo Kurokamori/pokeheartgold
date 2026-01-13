@@ -9,7 +9,7 @@ void ov04_022563B0(FieldSystem *fieldSystem);
 void ov04_02254710(FieldSystem *fieldSystem);
 void ov04_0225507C(FieldSystem *fieldSystem);
 void ov04_022566A0(FieldSystem *fieldSystem);
-void ov04_022566A0(FieldSystem *fieldSystem);
+void ov04_022566EC(FieldSystem *fieldSystem, int x, int z);
 void ov04_02256BA0(FieldSystem *fieldSystem);
 void ov04_02256EB0(FieldSystem *fieldSystem);
 

@@ -18,6 +18,9 @@ void EventObjectMovementMan_Delete(EventObjectMovementMan *movementMan);
 BOOL MapObject_AreBitsSetForMovementScriptInit(LocalMapObject *obj);
 BOOL MapObject_ClearHeldMovementIfActive(LocalMapObject *obj);
 void MapObject_SetHeldMovement(LocalMapObject *obj, u32 a1);
+void MapObject_ClearHeldMovement(LocalMapObject *obj);
 BOOL MapObject_IsMovementPaused(LocalMapObject *object);
+u32 sub_0206234C(int direction, int speed);
+int sub_02062390(u32 movementCmd);
 
 #endif // POKEHEARTGOLD_UNK_02062108_H
