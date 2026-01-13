@@ -118,10 +118,10 @@
 .public FieldSystem_GetPlayerAvatar
 .public PlayerAvatar_CheckFlag0
 .public PlayerAvatar_CheckRunningShoesLock
-.public sub_0205CF44
-.public sub_0205CF60
-.public sub_0205CFBC
-.public sub_0205DD94
+.public PlayerMovement_Reset
+.public PlayerMovement_IsIdle
+.public PlayerMovement_ForceStopAndFace
+.public PlayerMovement_GetInputDirection
 .public MapObject_GetMovement
 .public MapObject_GetType
 .public MapObject_GetScriptID

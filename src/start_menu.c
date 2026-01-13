@@ -21,6 +21,7 @@
 #include "menu_input_state.h"
 #include "overlay_01.h"
 #include "overlay_01_021F6830.h"
+#include "player_movement.h"
 #include "pokedex.h"
 #include "pokedex_util.h"
 #include "save_local_field_data.h"
@@ -36,7 +37,6 @@
 #include "unk_02054E00.h"
 #include "unk_0205A44C.h"
 #include "unk_0205AC88.h"
-#include "unk_0205CB48.h"
 #include "unk_02066EDC.h"
 #include "unk_02067A60.h"
 #include "unk_02068FC8.h"
@@ -224,8 +224,8 @@ void StartMenu_Init(FieldSystem *fieldSystem) {
         startMenu->inhibitIconFlags = FieldSystem_GetStartMenuButtonInhibitFlags_Normal(fieldSystem);
     }
     startMenu->unk_350 = FALSE;
-    if (sub_0205CF60(fieldSystem->playerAvatar) == TRUE) {
-        sub_0205CFBC(fieldSystem->playerAvatar, PlayerAvatar_GetFacingDirection(fieldSystem->playerAvatar));
+    if (PlayerMovement_IsIdle(fieldSystem->playerAvatar) == TRUE) {
+        PlayerMovement_ForceStopAndFace(fieldSystem->playerAvatar, PlayerAvatar_GetFacingDirection(fieldSystem->playerAvatar));
     }
     FieldSystem_CreateTask(fieldSystem, Task_StartMenu, startMenu);
 }
@@ -234,8 +234,8 @@ void sub_0203BCDC(FieldSystem *fieldSystem) {
     StartMenuTaskData *startMenu = StartMenu_Create();
     startMenu->inhibitIconFlags = sub_0203BEE0(fieldSystem);
     startMenu->unk_350 = TRUE;
-    if (sub_0205CF60(fieldSystem->playerAvatar) == TRUE) {
-        sub_0205CFBC(fieldSystem->playerAvatar, PlayerAvatar_GetFacingDirection(fieldSystem->playerAvatar));
+    if (PlayerMovement_IsIdle(fieldSystem->playerAvatar) == TRUE) {
+        PlayerMovement_ForceStopAndFace(fieldSystem->playerAvatar, PlayerAvatar_GetFacingDirection(fieldSystem->playerAvatar));
     }
     FieldSystem_CreateTask(fieldSystem, Task_StartMenu, startMenu);
 }
@@ -244,8 +244,8 @@ void sub_0203BD20(FieldSystem *fieldSystem) {
     StartMenuTaskData *startMenu = StartMenu_Create();
     startMenu->inhibitIconFlags = sub_0203BEE8(fieldSystem);
     startMenu->unk_350 = FALSE;
-    if (sub_0205CF60(fieldSystem->playerAvatar) == TRUE) {
-        sub_0205CFBC(fieldSystem->playerAvatar, PlayerAvatar_GetFacingDirection(fieldSystem->playerAvatar));
+    if (PlayerMovement_IsIdle(fieldSystem->playerAvatar) == TRUE) {
+        PlayerMovement_ForceStopAndFace(fieldSystem->playerAvatar, PlayerAvatar_GetFacingDirection(fieldSystem->playerAvatar));
     }
     FieldSystem_CreateTask(fieldSystem, Task_StartMenu, startMenu);
 }

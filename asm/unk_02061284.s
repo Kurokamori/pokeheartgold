@@ -1764,7 +1764,7 @@ _02061EA6:
 	bl MapObject_GetFieldSystem
 	bl FieldSystem_GetPlayerAvatar
 	add r6, r0, #0
-	bl sub_0205DE98
+	bl PlayerMovement_IsRunning
 	cmp r0, #0
 	bne _02061EC0
 	mov r0, #0

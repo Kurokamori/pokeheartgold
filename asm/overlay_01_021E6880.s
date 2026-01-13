@@ -343,7 +343,7 @@ _021E6AE4:
 	ldr r0, [r4, #0x40]
 	ldr r1, [sp]
 	add r2, r6, #0
-	bl sub_0205DD94
+	bl PlayerMovement_GetInputDirection
 	strb r0, [r5, #4]
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
@@ -387,7 +387,7 @@ _021E6B36:
 	cmp r0, #1
 	bne _021E6B66
 	ldr r0, [r4, #0x40]
-	bl sub_0205CF44
+	bl PlayerMovement_Reset
 	ldr r0, [r4, #0x3c]
 	bl MapObjectManager_PauseAllMovement
 	add r0, r4, #0
@@ -426,7 +426,7 @@ _021E6B94:
 	ldrh r2, [r5, #8]
 	ldr r0, [r4, #0x40]
 	mov r6, #0
-	bl sub_0205DD94
+	bl PlayerMovement_GetInputDirection
 	add r7, r0, #0
 	ldr r0, [r4, #0xc]
 	bl Save_VarsFlags_Get
@@ -500,14 +500,14 @@ _021E6C24:
 	cmp r0, #1
 	bne _021E6C86
 	ldr r0, [r4, #0x40]
-	bl sub_0205CF60
+	bl PlayerMovement_IsIdle
 	cmp r0, #1
 	bne _021E6C50
 	ldr r0, [r4, #0x40]
 	bl PlayerAvatar_GetFacingDirection
 	add r1, r0, #0
 	ldr r0, [r4, #0x40]
-	bl sub_0205CFBC
+	bl PlayerMovement_ForceStopAndFace
 _021E6C50:
 	ldr r0, [sp]
 	bl MapObject_GetType
@@ -765,14 +765,14 @@ _021E6E52:
 	cmp r0, #1
 	beq _021E6EA2
 	ldr r0, [r5, #0x40]
-	bl sub_0205CF60
+	bl PlayerMovement_IsIdle
 	cmp r0, #1
 	bne _021E6E88
 	ldr r0, [r5, #0x40]
 	bl PlayerAvatar_GetFacingDirection
 	add r1, r0, #0
 	ldr r0, [r5, #0x40]
-	bl sub_0205CFBC
+	bl PlayerMovement_ForceStopAndFace
 _021E6E88:
 	ldr r4, [sp]
 	add r0, r4, #0
@@ -871,14 +871,14 @@ _021E6F2E:
 	cmp r0, #1
 	bne _021E6F78
 	ldr r0, [r5, #0x40]
-	bl sub_0205CF60
+	bl PlayerMovement_IsIdle
 	cmp r0, #1
 	bne _021E6F5A
 	ldr r0, [r5, #0x40]
 	bl PlayerAvatar_GetFacingDirection
 	add r1, r0, #0
 	ldr r0, [r5, #0x40]
-	bl sub_0205CFBC
+	bl PlayerMovement_ForceStopAndFace
 _021E6F5A:
 	bl sub_020380B0
 	ldr r4, [sp]
@@ -963,14 +963,14 @@ _021E6FF6:
 	cmp r0, #1
 	bne _021E7054
 	ldr r0, [r4, #0x40]
-	bl sub_0205CF60
+	bl PlayerMovement_IsIdle
 	cmp r0, #1
 	bne _021E7022
 	ldr r0, [r4, #0x40]
 	bl PlayerAvatar_GetFacingDirection
 	add r1, r0, #0
 	ldr r0, [r4, #0x40]
-	bl sub_0205CFBC
+	bl PlayerMovement_ForceStopAndFace
 _021E7022:
 	ldr r0, [sp]
 	bl MapObject_GetType

@@ -1680,15 +1680,15 @@ _02057992:
 	ldr r3, [sp, #8]
 	add r1, r4, #0
 	add r2, r4, #0
-	bl sub_0205DF0C
+	bl PlayerMovement_CalcMovementCommand
 	add r7, r0, #0
 _020579A8:
 	ldr r0, [sp, #0x18]
-	bl sub_0205DFC8
+	bl PlayerMovement_IsScriptInit
 	cmp r0, #0
 	bne _020579BC
 	ldr r0, [sp, #0x18]
-	bl sub_0205DE38
+	bl PlayerMovement_IsScriptActive
 	cmp r0, #0
 	beq _020579FC
 _020579BC:
@@ -1696,7 +1696,7 @@ _020579BC:
 	beq _020579FC
 	ldr r0, [sp, #0x18]
 	add r1, r7, #0
-	bl sub_0205DFD4
+	bl PlayerMovement_SetMovementCommand
 	mov r0, #2
 	bic r4, r0
 	beq _020579FC
@@ -2320,7 +2320,7 @@ _02057E36:
 	lsl r0, r4, #2
 	add r0, r2, r0
 	ldr r0, [r0, #4]
-	bl sub_0205DFD4
+	bl PlayerMovement_SetMovementCommand
 	bl sub_02058024
 	pop {r4, pc}
 	.balign 4, 0

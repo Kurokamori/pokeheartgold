@@ -14,9 +14,9 @@
 .public sub_0205BA0C
 .public PlayerAvatar_SetFacingDirection
 .public PlayerAvatar_GetMapObject
-.public sub_0205DA34
-.public sub_0205DFC8
-.public sub_0205DFD4
+.public PlayerMovement_CheckCollision
+.public PlayerMovement_IsScriptInit
+.public PlayerMovement_SetMovementCommand
 .public MapObject_SetFlagsBits
 .public MapObject_ClearFlagsBits
 .public sub_0205F504

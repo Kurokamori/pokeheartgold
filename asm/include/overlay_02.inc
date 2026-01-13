@@ -249,7 +249,7 @@
 .public PlayerAvatar_GetMapObject
 .public PlayerAvatar_GetState
 .public PlayerAvatar_GetGender
-.public sub_0205DE98
+.public PlayerMovement_IsRunning
 .public sub_0205E38C
 .public sub_0205E420
 .public MapObjectManager_GetFirstActiveObjectByID

@@ -6,7 +6,7 @@
 .public PlayerAvatar_GetZCoord
 .public PlayerAvatar_GetMapObject
 .public FieldSystem_GetPlayerAvatar
-.public sub_0205DE98
+.public PlayerMovement_IsRunning
 .public MapObject_SetFlagsBits
 .public MapObject_ClearFlagsBits
 .public MapObject_GetFlagsBitsMask

@@ -373,7 +373,7 @@ _021F1DBA:
 _021F1DBE:
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_0205CBE4
+	bl PlayerMovement_CanMove
 	cmp r0, #0
 	bne _021F1DCE
 	mov r0, #0
@@ -410,7 +410,7 @@ ov01_021F1DF4: ; 0x021F1DF4
 	add r0, r5, #0
 	add r1, r4, #0
 	add r6, r3, #0
-	bl sub_0205DEC0
+	bl PlayerMovement_GetMovementResult
 	str r0, [sp]
 	mov r0, #1
 	tst r0, r6
@@ -546,7 +546,7 @@ _021F1EF0:
 	cmp r0, #0
 	bne _021F1F0E
 	ldr r0, [r4, #0xc]
-	bl sub_0205DE38
+	bl PlayerMovement_IsScriptActive
 	cmp r0, #0
 	beq _021F1F82
 _021F1F0E:
@@ -1074,7 +1074,7 @@ _021F2346:
 	add r1, r0, #0
 	add r0, r5, #0
 	add r2, r4, #0
-	bl sub_0205DA34
+	bl PlayerMovement_CheckCollision
 	cmp r0, #0x20
 	bne _021F235E
 	mov r0, #0
@@ -1285,7 +1285,7 @@ _021F250E:
 _021F2512:
 	add r0, r5, #0
 	add r1, r4, #0
-	bl sub_0205DFEC
+	bl PlayerMovement_GetFacingTileBehavior
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	bl MetatileBehavior_IsWaterfall

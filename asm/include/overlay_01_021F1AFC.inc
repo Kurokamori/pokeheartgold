@@ -47,11 +47,11 @@
 .public PlayerAvatar_GetSpriteByStateAndGender
 .public PlayerAvatar_CheckFlag0
 .public PlayerAvatar_SetFlag1
-.public sub_0205CBE4
-.public sub_0205DA34
-.public sub_0205DE38
-.public sub_0205DEC0
-.public sub_0205DFEC
+.public PlayerMovement_CanMove
+.public PlayerMovement_CheckCollision
+.public PlayerMovement_IsScriptActive
+.public PlayerMovement_GetMovementResult
+.public PlayerMovement_GetFacingTileBehavior
 .public MapObject_Delete
 .public MapObject_GetID
 .public MapObject_GetMapID

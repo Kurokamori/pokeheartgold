@@ -67,10 +67,10 @@
 .public PlayerAvatar_GetMapObject
 .public FieldSystem_GetPlayerAvatar
 .public PlayerAvatar_CheckRunningShoesLock
-.public sub_0205DE38
-.public sub_0205DF0C
-.public sub_0205DFC8
-.public sub_0205DFD4
+.public PlayerMovement_IsScriptActive
+.public PlayerMovement_CalcMovementCommand
+.public PlayerMovement_IsScriptInit
+.public PlayerMovement_SetMovementCommand
 .public MapObject_Remove
 .public MapObjectManager_GetFirstActiveObjectByID
 .public MapObject_SetID

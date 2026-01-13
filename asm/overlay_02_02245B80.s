@@ -3319,7 +3319,7 @@ _02247576:
 	cmp r7, #2
 	beq _02247598
 	ldr r0, [r5, #0x40]
-	bl sub_0205DE98
+	bl PlayerMovement_IsRunning
 	cmp r0, #0
 	bne _02247598
 	sub r4, #0x14
